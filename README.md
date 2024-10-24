@@ -1,4 +1,4 @@
-# afs
+# sus
 Automatic File Sorting
 
 
