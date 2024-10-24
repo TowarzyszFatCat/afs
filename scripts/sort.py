@@ -10,22 +10,17 @@ def main():
     for root, subdirs, files in os.walk(DIR):
         for file in files:
             name, ext = os.path.splitext(file)
-            fext = ext[1:]
+            fext = ext[1:]  # Get the file extension without the dot
             fpath = os.path.join(root, file)
 
             if fext != "":
-                if os.path.exists(os.path.join(DIR + fext)):
-                    target_dir = os.path.join(DIR, fext)
-                else:
-                    os.makedirs(os.path.join(DIR, fext))
-                    target_dir = os.path.join(DIR, fext)
-
+                target_dir = os.path.join(DIR, fext)
+                # Create directory if it doesn't exist
+                os.makedirs(target_dir, exist_ok=True)
             else:
-                if os.path.exists(os.path.join(DIR + "_WExt_")):
-                    target_dir = os.path.join(DIR, "_WExt_")
-                else:
-                    os.makedirs(os.path.join(DIR, "_WExt_"))
-                    target_dir = os.path.join(DIR, "_WExt_")
+                target_dir = os.path.join(DIR, "_WExt_")
+                # Create directory if it doesn't exist
+                os.makedirs(target_dir, exist_ok=True)
 
             # Handle filename collisions
             target_file = os.path.join(target_dir, file)
@@ -35,6 +30,7 @@ def main():
                 target_file = os.path.join(target_dir, f"{name}_{counter}{ext}")
                 counter += 1
 
+            # Move the file to the target directory
             shutil.move(fpath, target_file)
 
     delete_empty_folders(DIR)

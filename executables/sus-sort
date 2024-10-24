@@ -1,3 +1,3 @@
 #!/bin/bash
 
-~/.sus_src/.venv/bin/python ~/.sus_src/scripts/sus-sort.py "$1"
+~/.sus_src/.venv/bin/python ~/.sus_src/scripts/sort.py "$1"
