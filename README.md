@@ -16,6 +16,11 @@ Added sus-sort!
 cd ~ && git clone https://github.com/TowarzyszFatCat/sus.git && bash sus/install.sh
 ```
 
+### Uninstall
+```bash
+sudo rm -rf ~/.sus_src && sudo rm -rf /usr/local/bin/sus-*
+```
+
 ---
 
 ### Features:
