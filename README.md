@@ -25,3 +25,11 @@ sus-sort [path] - Sorting files from a given folder recursively
 
 > [!WARNING]
 > This project has just started, I plan to create and post here useful scripts that make work easier.
+
+---
+
+<div align="center">
+
+[![Star History Chart](https://api.star-history.com/svg?repos=TowarzyszFatCat/sus&type=Date)](https://star-history.com/#TowarzyszFatCat/sus&Date)
+
+</div>
